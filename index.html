@@ -1,83 +1,116 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn how to build semantic, accessible, and SEO-friendly websites using HTML5.">
-  <meta name="keywords" content="HTML5, Web Development, Accessibility, SEO, Semantic HTML">
-  <meta name="author" content="Your Name">
-  <title>HTML5 Accessibility & SEO Basics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO-friendly metadata -->
+  <title>GreenEarth | Eco-Friendly Living Tips</title>
+  <meta name="description" content="GreenEarth provides practical tips and inspiration for living a more eco-friendly, sustainable life." />
+  <meta name="keywords" content="eco-friendly, sustainability, green living, environment" />
+  <meta name="author" content="GreenEarth Team" />
+  
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:title" content="GreenEarth | Eco-Friendly Living Tips" />
+  <meta property="og:description" content="Discover how to live more sustainably with GreenEarth's tips and insights." />
+  <meta property="og:image" content="https://example.com/images/og-preview.jpg" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, main, footer {
+      padding: 20px;
+    }
+    header {
+      background-color: #eaf7ea;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: green;
+    }
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>HTML5 Accessibility & SEO Basics</h1>
-    <nav aria-label="Main Navigation">
-      <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#accessibility">Accessibility</a></li>
-        <li><a href="#seo">SEO</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header with site branding -->
+  <header role="banner">
+    <h1>GreenEarth</h1>
+    <p>Your Guide to Sustainable Living</p>
   </header>
 
-  <main>
-    <section id="introduction" aria-labelledby="intro-heading">
-      <h2 id="intro-heading">Introduction</h2>
-      <p>This page demonstrates the use of semantic HTML5 elements along with accessibility features and SEO techniques. The goal is to build a well-structured web page that is both user- and machine-friendly.</p>
+  <!-- Navigation with ARIA label -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#tips">Tips</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main content area -->
+  <main role="main">
+    <!-- Introduction section -->
+    <section>
+      <h2>Welcome to GreenEarth</h2>
+      <p>We help individuals and families make sustainable choices in their daily lives, one step at a time.</p>
     </section>
 
-    <section id="accessibility" aria-labelledby="access-heading">
-      <h2 id="access-heading">Web Accessibility</h2>
+    <!-- Eco Tips section -->
+    <section id="tips">
+      <h2>Top 3 Eco-Friendly Tips</h2>
       <article>
-        <h3>Why Accessibility Matters</h3>
-        <p>Accessibility ensures that all users, including those with disabilities, can access and navigate websites effectively. Semantic HTML and proper use of ARIA attributes improve support for screen readers and other assistive technologies.</p>
+        <h3>1. Reduce Single-Use Plastics</h3>
+        <p>Choose reusable bags, bottles, and containers to minimize waste.</p>
       </article>
       <article>
-        <h3>Best Practices</h3>
-        <ul>
-          <li>Use meaningful landmarks like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>.</li>
-          <li>Label form fields with <code>&lt;label&gt;</code> and use <code>aria-label</code> where necessary.</li>
-          <li>Ensure content is readable and navigable with keyboard input.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section id="seo" aria-labelledby="seo-heading">
-      <h2 id="seo-heading">Search Engine Optimization (SEO)</h2>
-      <article>
-        <h3>SEO Fundamentals</h3>
-        <p>SEO involves making your website content discoverable and indexable by search engines. Semantic tags and meaningful metadata play a critical role.</p>
+        <h3>2. Save Energy at Home</h3>
+        <p>Use LED bulbs, unplug devices, and invest in energy-efficient appliances.</p>
       </article>
       <article>
-        <h3>On-Page SEO Tips</h3>
-        <ul>
-          <li>Use heading tags in proper order (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>).</li>
-          <li>Include descriptive <code>&lt;title&gt;</code> and <code>&lt;meta&gt;</code> tags.</li>
-          <li>Write clear, keyword-rich, human-friendly content.</li>
-        </ul>
+        <h3>3. Support Local Farmers</h3>
+        <p>Buying local reduces transportation emissions and supports community businesses.</p>
       </article>
     </section>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <form action="/submit" method="post" aria-label="Contact Form">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <!-- Benefits section -->
+    <section id="benefits">
+      <h2>Why Go Green?</h2>
+      <ul>
+        <li>Protects natural resources</li>
+        <li>Improves personal health</li>
+        <li>Reduces environmental footprint</li>
+      </ul>
+    </section>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
+    <!-- Contact section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:jaynewanjiru117@gmail.com">jaynewanjiru117@gmail.com</a></p>
+      <form aria-label="Contact form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br /><br />
+        <button type="submit">Send</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  <!-- Footer with copyright -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 GreenEarth. All rights reserved.</p>
   </footer>
 </body>
 </html>
